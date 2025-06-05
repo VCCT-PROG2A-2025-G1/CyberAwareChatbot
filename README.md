@@ -1,4 +1,4 @@
-# ST10445158_PROG6221_Part_3
+# ST10445158 PROG6221 POE Part 3
 
 Cyber Aware Chatbot
 The Cyber Aware Chatbot is a WPF application designed to educate users about cybersecurity through an interactive chat interface, task management, and tutorials. Built with .NET, it offers a user-friendly experience with features like theme switching, activity logging, and sentiment detection, making it a fun and engaging tool for learning about phishing, password security, and more.
@@ -29,7 +29,7 @@ Greeting.wav: A valid .wav audio file for the greeting sound.
 Installation
 
 Clone the Repository:
-git clone https://github.com/your-username/CyberAwareChatbot.git
+git clone https://github.com/VCCT-PROG2A-2025-G1/CyberAwareChatbot.git
 cd CyberAwareChatbot
 
 
