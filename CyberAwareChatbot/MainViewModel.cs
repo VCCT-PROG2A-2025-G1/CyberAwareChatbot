@@ -83,6 +83,7 @@ namespace CyberAwareChatbot
         public ICommand StartQuizCommand { get; }
         public ICommand StartTutorialCommand { get; }
         public ICommand ViewLogsCommand { get; }
+        public ICommand ClearLogsCommand { get; }
         public ICommand ShowHelpCommand { get; }
 
         public MainViewModel()
@@ -97,6 +98,7 @@ namespace CyberAwareChatbot
             StartQuizCommand = new RelayCommand(StartQuiz);
             StartTutorialCommand = new RelayCommand(StartTutorial);
             ViewLogsCommand = new RelayCommand(ViewLogs);
+            ClearLogsCommand = new RelayCommand(ClearLogs);
             ShowHelpCommand = new RelayCommand(ShowHelp);
             LoadUserDataAsync();
             PlayGreeting();
@@ -395,6 +397,14 @@ namespace CyberAwareChatbot
             var logs = _logger.GetLogs();
             ChatMessages.Add(new ChatMessage("Activity Log:\n" + string.Join("\n", logs), Colors.Cyan));
             _logger.LogAction("Viewed activity logs");
+        }
+
+        private void ClearLogs()
+        {
+            _logger.ClearLogs();
+            ChatMessages.Add(new ChatMessage($"Activity logs cleared, {_userName}.", Colors.Green));
+            _logger.LogAction("Cleared activity logs");
+            SaveUserDataAsync();
         }
 
         private void ShowHelp()

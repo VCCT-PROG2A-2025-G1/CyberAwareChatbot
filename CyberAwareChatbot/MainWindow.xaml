@@ -44,7 +44,18 @@
                     <GridView>
                         <GridViewColumn Header="Title" Width="100" DisplayMemberBinding="{Binding Title}"/>
                         <GridViewColumn Header="Description" Width="150" DisplayMemberBinding="{Binding Description}"/>
-                        <GridViewColumn Header="Reminder" Width="120" DisplayMemberBinding="{Binding ReminderDate}"/>
+                        <GridViewColumn Width="120">
+                            <GridViewColumnHeader Content="Reminder">
+                                <GridViewColumnHeader.ToolTip>
+                                    <ToolTip>The date and time when the task reminder is due.</ToolTip>
+                                </GridViewColumnHeader.ToolTip>
+                            </GridViewColumnHeader>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding ReminderDate}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
                         <GridViewColumn Header="Status" Width="80" DisplayMemberBinding="{Binding Status}"/>
                     </GridView>
                 </ListView.View>
@@ -61,6 +72,7 @@
             <Button Content="Quiz" Command="{Binding StartQuizCommand}" Margin="0,0,0,5"/>
             <Button Content="Tutorial" Command="{Binding StartTutorialCommand}" Margin="0,0,0,5"/>
             <Button Content="View Logs" Command="{Binding ViewLogsCommand}" Margin="0,0,0,5"/>
+            <Button Content="Clear Logs" Command="{Binding ClearLogsCommand}" Margin="0,0,0,5"/>
             <Button Content="Help" Command="{Binding ShowHelpCommand}" Margin="0,0,0,5"/>
         </StackPanel>
 
