@@ -1,5 +1,5 @@
 # ST10445158 PROG6221 POE Part 3
-
+Screen recording of code running and explanation: https://youtu.be/Fw-UeS2wCbo 
 Cyber Aware Chatbot
 The Cyber Aware Chatbot is a WPF application designed to educate users about cybersecurity through an interactive chat interface, task management, and tutorials. Built with .NET, it offers a user-friendly experience with features like theme switching, activity logging, and sentiment detection, making it a fun and engaging tool for learning about phishing, password security, and more.
 Features
